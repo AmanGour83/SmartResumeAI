@@ -12,9 +12,7 @@ A professional web app that helps you craft beautiful, effective resumes with in
 - 💾 **Auto-Save**: Your work is always saved locally  
 - 📱 **Responsive Design**: Perfect on both desktop and mobile  
 
-## 🌐 Live Demo
 
-👉 [https://amangour83.github.io/SmartResumeAI/]
 
 ## 🛠️ How to Use
 
