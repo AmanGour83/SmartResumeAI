@@ -10,8 +10,11 @@ A professional web app that helps you craft beautiful, effective resumes with in
 - 📄 **PDF Export**: Download your resume as a sleek PDF  
 - 🖨️ **Print Support**: Print-ready formatting for clean output  
 - 💾 **Auto-Save**: Your work is always saved locally  
-- 📱 **Responsive Design**: Perfect on both desktop and mobile  
+- 📱 **Responsive Design**: Perfect on both desktop and mobile
 
+- ## 🌐 Live Demo
+
+👉 [[https://amangour83.github.io/SmartResumeAI/](https://smartresumaai.netlify.app/)]
 
 
 ## 🛠️ How to Use
