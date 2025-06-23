@@ -41,21 +41,4 @@ A professional web app that helps you craft beautiful, effective resumes with in
 - 🧠 **AI Integration**: OpenAI GPT-3.5 Turbo  
 - 🐍 **Backend**: Flask (Python) for AI API  
 
-## 🚀 GitHub Pages Deployment
 
-The app runs as a static site on GitHub Pages. AI suggestions require a backend, but all resume-building features work fully in-browser!
-
-### 🌐 To Enable AI Features
-
-1. Deploy Flask backend to Heroku, Railway, or Render  
-2. Update API endpoint in `script.js`  
-3. Set your OpenAI API key in the backend environment  
-
-### 🌍 For Static GitHub Pages (No AI)
-
-Includes full functionality like:  
-- ✅ Resume editing  
-- ✅ Template switching  
-- ✅ PDF export  
-- ✅ Print support  
-- ✅ Local storage
