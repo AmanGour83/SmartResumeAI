@@ -66,4 +66,19 @@ Includes full functionality like:
    ```bash
    pip install -r requirements.txt  
    export OPENAI_API_KEY=your_api_key_here  
-   python app.py  
+   python app.py
+
+# ⚠️ AI Suggestion Feature - Currently Not Working
+
+Hey there 👋
+
+Just a quick note to let you know:  
+At the moment, the **AI Suggestion** feature is not functioning as expected. We’re actively looking into the issue 🛠️ and working towards a fix.
+
+Thanks for your patience and understanding! 🙌
+
+Stay tuned for updates.  
+Happy coding! 💻
+
+—
+_This message will self-destruct when the bug is squashed... just kidding 😄_
