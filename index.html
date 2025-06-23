@@ -126,20 +126,20 @@
                             <textarea class="form-control" id="skills" rows="3" placeholder="List your skills separated by commas..."></textarea>
                         </div>
 
-                        <!-- AI Suggestions -->
+                        <!-- Professional Tips -->
                         <div class="section-header">
-                            <h6><i class="fas fa-brain me-2"></i>AI Suggestions</h6>
+                            <h6><i class="fas fa-lightbulb me-2"></i>Professional Tips</h6>
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="getAISuggestions('overall')">
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="getStaticSuggestions('overall')">
                                     <i class="fas fa-lightbulb me-1"></i>Overall
                                 </button>
-                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="getAISuggestions('summary')">
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="getStaticSuggestions('summary')">
                                     Summary
                                 </button>
-                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="getAISuggestions('experience')">
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="getStaticSuggestions('experience')">
                                     Experience
                                 </button>
-                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="getAISuggestions('skills')">
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="getStaticSuggestions('skills')">
                                     Skills
                                 </button>
                             </div>
@@ -147,7 +147,7 @@
                         <div id="aiSuggestionsContainer" class="mb-3">
                             <div class="alert alert-info">
                                 <i class="fas fa-info-circle me-2"></i>
-                                Click any button above to get AI-powered suggestions for improving your resume!
+                                Click any button above to get professional tips for improving your resume!
                             </div>
                         </div>
                     </div>

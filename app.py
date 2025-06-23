@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, send_from_directory, request, jsonify
+from flask import Flask, render_template, send_from_directory, request, jsonify
 from openai import OpenAI
 
 # Create Flask app
@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder='.', template_folder='.')
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key-for-resume-builder")
 
 # Initialize OpenAI client
-client = OpenAI(api_key="your OpenAI API key")
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 @app.route('/')
 def index():

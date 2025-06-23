@@ -177,7 +177,7 @@ function changeTemplate() {
 
 function updatePreview() {
     const data = collectFormData();
-    const template = template[currentTemplate];
+    const template = templates[currentTemplate];
     const previewContainer = document.getElementById('resumePreview');
     
     if (template && template.render) {
@@ -544,7 +544,37 @@ function showNotification(message, type = 'info') {
     }, 5000);
 }
 
-// AI Suggestions functionality
+// Static Professional Tips functionality
+function getStaticSuggestions(section) {
+    const staticSuggestions = {
+        overall: [
+            "Keep your resume to 1-2 pages maximum and use consistent formatting throughout",
+            "Include quantifiable achievements with specific numbers, percentages, or dollar amounts",
+            "Use professional fonts and maintain consistent spacing and alignment"
+        ],
+        summary: [
+            "Start with your years of experience and key expertise areas",
+            "Include 2-3 specific achievements that demonstrate your value to employers",
+            "Use action-oriented language and include industry-relevant keywords"
+        ],
+        experience: [
+            "Begin each bullet point with strong action verbs like 'achieved', 'managed', or 'improved'",
+            "Quantify your accomplishments with specific metrics and results",
+            "Focus on impact and results rather than just listing job responsibilities"
+        ],
+        skills: [
+            "Separate technical skills from soft skills for better organization",
+            "Include skill levels (beginner, intermediate, advanced) where appropriate",
+            "Focus on skills that are directly relevant to your target job role"
+        ]
+    };
+    
+    const suggestions = staticSuggestions[section] || staticSuggestions.overall;
+    displayAISuggestions(suggestions, section);
+    showNotification(`Showing ${section} improvement tips!`, 'success');
+}
+
+// AI Suggestions functionality (for when API key is working)
 async function getAISuggestions(section) {
     const button = event.target;
     const originalText = button.innerHTML;
@@ -585,10 +615,10 @@ async function getAISuggestions(section) {
         
     } catch (error) {
         console.error('Error getting AI suggestions:', error);
-        showNotification('Unable to get AI suggestions. Please check your internet connection and try again.', 'error');
+        showNotification('AI suggestions unavailable. Showing professional tips instead.', 'info');
         
-        // Show fallback message
-        displayAISuggestions(['Unable to generate suggestions at this time. Please ensure you have filled in relevant information and try again.'], section);
+        // Fallback to static suggestions
+        getStaticSuggestions(section);
     } finally {
         // Restore button
         button.innerHTML = originalText;
@@ -604,8 +634,8 @@ function displayAISuggestions(suggestions, section) {
     container.innerHTML = `
         <div class="alert alert-light border">
             <div class="d-flex align-items-center mb-2">
-                <i class="fas fa-brain text-primary me-2"></i>
-                <strong>AI Suggestions for ${sectionTitle}</strong>
+                <i class="fas fa-lightbulb text-primary me-2"></i>
+                <strong>Professional Tips for ${sectionTitle}</strong>
             </div>
             <ul class="mb-0">
                 ${suggestions.map(suggestion => `<li class="mb-1">${suggestion}</li>`).join('')}
@@ -613,7 +643,7 @@ function displayAISuggestions(suggestions, section) {
             <div class="mt-2">
                 <small class="text-muted">
                     <i class="fas fa-info-circle me-1"></i>
-                    These are AI-generated suggestions. Review and apply them based on your specific situation.
+                    These are professional resume writing tips. Apply them based on your specific situation.
                 </small>
             </div>
         </div>

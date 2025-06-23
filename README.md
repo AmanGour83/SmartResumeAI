@@ -14,7 +14,7 @@ A professional web app that helps you craft beautiful, effective resumes with in
 
 ## 🌐 Live Demo
 
-👉 [GitHub Pages URL will be here after deployment]
+👉 [https://amangour83.github.io/SmartResumeAI/]
 
 ## 🛠️ How to Use
 
@@ -58,27 +58,3 @@ Includes full functionality like:
 - ✅ PDF export  
 - ✅ Print support  
 - ✅ Local storage
-
-## ⚙️ Installation
-
-1. Clone this repo  
-2. For AI-enabled local development:  
-   ```bash
-   pip install -r requirements.txt  
-   export OPENAI_API_KEY=your_api_key_here  
-   python app.py
-
-# ⚠️ AI Suggestion Feature - Currently Not Working
-
-Hey there 👋
-
-Just a quick note to let you know:  
-At the moment, the **AI Suggestion** feature is not functioning as expected. We’re actively looking into the issue 🛠️ and working towards a fix.
-
-Thanks for your patience and understanding! 🙌
-
-Stay tuned for updates.  
-Happy coding! 💻
-
-—
-_This message will self-destruct when the bug is squashed... just kidding 😄_
