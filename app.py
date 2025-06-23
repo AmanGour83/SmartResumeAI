@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder='.', template_folder='.')
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key-for-resume-builder")
 
 # Initialize OpenAI client
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="your OpenAI API key")
 
 @app.route('/')
 def index():
